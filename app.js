@@ -10,7 +10,11 @@ app.get("/", function(req,res){
 });
 
 app.get("/campgrounds", function(req,res) {
-	var
+	var campgrounds = [
+		{name: "Salmon Creek", image: ""},
+		{name: "Salmon Creek", image: ""},
+		{name: "Salmon Creek", image: ""}
+	]
 });
 
 //port for app to be displayed
