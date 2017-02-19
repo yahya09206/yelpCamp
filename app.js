@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 
 //landing page route
 app.get("/", function(req,res){
-	res.send("This will be the landing page");
+	res.render("landing");
 });
 
 app.get("/campgrounds", function(req,res) {
