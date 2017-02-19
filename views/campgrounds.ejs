@@ -1,4 +1,8 @@
 <h1>This is the campgrounds page</h1>
 
 
-<a href="/campgrounds">view all campgrounds</a>
+<% campgrounds.forEach(function(campground) { %>
+	<li>
+		<%=campground.name %>
+	</li>
+<% }) %>
