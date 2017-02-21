@@ -19,7 +19,9 @@ app.get("/campgrounds", function(req,res) {
 });
 
 app.post("/campgrounds", function(req,res){
-
+	res.send("You hit the route");
+	//get data from form and add to campgrounds array
+	//redirect to campgrounds page
 });
 
 //port for app to be displayed
