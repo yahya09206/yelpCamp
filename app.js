@@ -27,6 +27,10 @@ app.post("/campgrounds", function(req,res){
 	//redirect to campgrounds page
 });
 
+app.get("/campgrounds/new", function(req,res){
+
+});
+
 //port for app to be displayed
 app.listen(3000, function(){
 	console.log("You are now listening to the smooth sounds of port3000");
