@@ -18,6 +18,10 @@ app.get("/campgrounds", function(req,res) {
 	res.render("campgrounds", {campgrounds: campgrounds});
 });
 
+app.post("/campgrounds", function(req,res){
+
+});
+
 //port for app to be displayed
 app.listen(3000, function(){
 	console.log("You are now listening to the smooth sounds of port3000");
