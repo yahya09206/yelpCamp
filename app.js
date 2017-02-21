@@ -28,7 +28,7 @@ app.post("/campgrounds", function(req,res){
 });
 
 app.get("/campgrounds/new", function(req,res){
-
+	res.render("new.ejs");
 });
 
 //port for app to be displayed
