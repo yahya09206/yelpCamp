@@ -23,11 +23,12 @@ app.get("/campgrounds", function(req,res) {
 });
 
 app.post("/campgrounds", function(req,res){
-	res.send("You hit the route");
 	//get data from form and add to campgrounds array
-	var name = req.body.name
-	//redirect to campgrounds page
+	var name = req.body.name;
 	var image = req.body.name
+	var newCampGround = {name: name, image: image}
+	campGrounds.push(newCampGround);
+	res.redirect("/campgrounds");
 });
 
 app.get("/campgrounds/new", function(req,res){
