@@ -7,24 +7,27 @@ app.use(bodyParser.urlencoded({extended: true}));
 //set view engine to ejs
 app.set("view engine", "ejs");
 
+var campgrounds = [
+		{name: "Salmon Creek", image: "https://farm8.staticflickr.com/7252/7626464792_3e68c2a6a5.jpg"},
+		{name: "Granite Hill", image: "https://farm9.staticflickr.com/8225/8524305204_43934a319d.jpg"},
+		{name: "Mountain Goat's Rest", image: "https://farm9.staticflickr.com/8456/8006869967_de2ed3e564.jpg"}
+	]
+
 //landing page route
 app.get("/", function(req,res){
 	res.render("landing");
 });
 
 app.get("/campgrounds", function(req,res) {
-	var campgrounds = [
-		{name: "Salmon Creek", image: "https://farm8.staticflickr.com/7252/7626464792_3e68c2a6a5.jpg"},
-		{name: "Granite Hill", image: "https://farm9.staticflickr.com/8225/8524305204_43934a319d.jpg"},
-		{name: "Mountain Goat's Rest", image: "https://farm9.staticflickr.com/8456/8006869967_de2ed3e564.jpg"}
-	]
 	res.render("campgrounds", {campgrounds: campgrounds});
 });
 
 app.post("/campgrounds", function(req,res){
 	res.send("You hit the route");
 	//get data from form and add to campgrounds array
+	var name = req.body.name
 	//redirect to campgrounds page
+	var image = req.body.name
 });
 
 app.get("/campgrounds/new", function(req,res){
