@@ -19,6 +19,7 @@ var campgroundSchema = new mongoose.Schema({
 
 //model
 var Campground = mongoose.model("Campground", campgroundSchema);
+
 //Create campground inside of db
 // Campground.create(
 // 	{
