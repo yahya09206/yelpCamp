@@ -17,6 +17,8 @@ var campgroundSchema = new mongoose.Schema({
 	image: String
 });
 
+var Campground = mongoose.model("Campground", campgroundSchema);
+
 var campgrounds = [
 		{name: "Salmon Creek", image: "https://farm8.staticflickr.com/7252/7626464792_3e68c2a6a5.jpg"},
 		{name: "Granite Hill", image: "https://farm9.staticflickr.com/8225/8524305204_43934a319d.jpg"},
