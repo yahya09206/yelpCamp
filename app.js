@@ -12,6 +12,10 @@ app.set("view engine", "ejs");
 
 
 //Schema setup
+var campgroundSchema = new mongoose.Schema({
+	name: String,
+	image: String
+});
 
 var campgrounds = [
 		{name: "Salmon Creek", image: "https://farm8.staticflickr.com/7252/7626464792_3e68c2a6a5.jpg"},
