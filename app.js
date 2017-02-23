@@ -22,8 +22,8 @@ var Campground = mongoose.model("Campground", campgroundSchema);
 //Create campground inside of db
 Campground.create(
 	{
-		name: "Salmon Creek", 
-		image: "https://farm8.staticflickr.com/7252/7626464792_3e68c2a6a5.jpg"
+		name: "Granite Hill", 
+		image: "https://farm9.staticflickr.com/8225/8524305204_43934a319d.jpg"
 	},function(err,campground){
 		if(err){
 			console.log(err);
@@ -34,20 +34,20 @@ Campground.create(
 	});
 
 
-
-var campgrounds = [
-		{name: "Salmon Creek", image: "https://farm8.staticflickr.com/7252/7626464792_3e68c2a6a5.jpg"},
-		{name: "Granite Hill", image: "https://farm9.staticflickr.com/8225/8524305204_43934a319d.jpg"},
-		{name: "Mountain Goat's Rest", image: "https://farm9.staticflickr.com/8456/8006869967_de2ed3e564.jpg"}
-	]
-
 //landing page route
 app.get("/", function(req,res){
 	res.render("landing");
 });
 
 app.get("/campgrounds", function(req,res) {
-	res.render("campgrounds", {campgrounds: campgrounds});
+	//Get All campgrounds from db
+	Campground.find({}, function(err, campgrounds){
+		if(err){
+			console.log(err);
+		}else{
+			res.render("campgrounds", {campgrounds: campgrounds});
+		}
+	});
 });
 
 app.post("/campgrounds", function(req,res){
