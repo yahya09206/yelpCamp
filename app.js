@@ -74,6 +74,8 @@ app.get("/campgrounds/new", function(req,res){
 	res.render("new.ejs");
 });
 
+//SHOW - page for more info about campground
+
 //port for app to be displayed
 app.listen(3000, function(){
 	console.log("You are now listening to the smooth sounds of port3000");
