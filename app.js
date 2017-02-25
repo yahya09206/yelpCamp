@@ -75,6 +75,9 @@ app.get("/campgrounds/new", function(req,res){
 });
 
 //SHOW - page for more info about campground
+app.get("/campgrounds/:id", function(req,res){
+	res.send("This will be the show page one day");
+})
 
 //port for app to be displayed
 app.listen(3000, function(){
