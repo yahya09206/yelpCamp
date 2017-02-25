@@ -79,7 +79,7 @@ app.get("/campgrounds/new", function(req,res){
 //SHOW - shows more info about one campground
 app.get("/campgrounds/:id", function(req,res){
 	//find campground with provided id
-	Campground.FindById(req.params.id, function(err,foundCampground){
+	Campground.findById(req.params.id, function(err,foundCampground){
 		if(err){
 			console.log(err)
 		}else{
