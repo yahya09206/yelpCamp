@@ -23,19 +23,19 @@ var campgroundSchema = new mongoose.Schema({
 var Campground = mongoose.model("Campground", campgroundSchema);
 
 //Create campground inside of db
-Campground.create(
-	{
-		name: "Granite Hill", 
-		image: "https://farm8.staticflickr.com/7042/7121867321_65b5f46ef1.jpg",
-		description: "This is a huge granite hill, no bathroom. No water, beautiful granite!"
-	},function(err,campground){
-		if(err){
-			console.log(err);
-		}else{
-			console.log("Newly Created Campground");
-			console.log(campground);
-		}
-	});
+// Campground.create(
+// 	{
+// 		name: "Granite Hill", 
+// 		image: "https://farm8.staticflickr.com/7042/7121867321_65b5f46ef1.jpg",
+// 		description: "This is a huge granite hill, no bathroom. No water, beautiful granite!"
+// 	},function(err,campground){
+// 		if(err){
+// 			console.log(err);
+// 		}else{
+// 			console.log("Newly Created Campground");
+// 			console.log(campground);
+// 		}
+// 	});
 
 
 //landing page route
@@ -76,11 +76,11 @@ app.get("/campgrounds/new", function(req,res){
 	res.render("new.ejs");
 });
 
-//SHOW - page for more info about campground
+//SHOW - shows more info about one campground
 app.get("/campgrounds/:id", function(req,res){
 	//find campground with provided id
 	//render show template with that campground
-	res.send("This will be the show page one day");
+	res.render("show");
 })
 
 //port for app to be displayed
