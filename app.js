@@ -80,11 +80,14 @@ app.get("/campgrounds/new", function(req,res){
 app.get("/campgrounds/:id", function(req,res){
 	//find campground with provided id
 	Campground.FindById(req.params.id, function(err,foundCampground){
-
+		if(err){
+			console.log(err)
+		}else{
+			//render show template with that campground
+			res.render("show", {campground: foundCampground});
+		}
 	});
 	req.params.id
-	//render show template with that campground
-	res.render("show");
 })
 
 //port for app to be displayed
