@@ -15,7 +15,8 @@ app.set("view engine", "ejs");
 //Schema setup
 var campgroundSchema = new mongoose.Schema({
 	name: String,
-	image: String
+	image: String,
+	description: String
 });
 
 //model
@@ -76,6 +77,8 @@ app.get("/campgrounds/new", function(req,res){
 
 //SHOW - page for more info about campground
 app.get("/campgrounds/:id", function(req,res){
+	//find campground with provided id
+	//render show template with that campground
 	res.send("This will be the show page one day");
 })
 
