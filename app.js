@@ -89,7 +89,7 @@ app.get("/campgrounds/:id", function(req,res){
 		}
 	});
 	req.params.id
-})
+});
 
 //port for app to be displayed
 app.listen(3000, function(){
