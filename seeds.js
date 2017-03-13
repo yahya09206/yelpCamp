@@ -8,13 +8,13 @@ var data = [
 		description: "blah blah blah"
 	},
 	{
-		name: "Cloud's rest",
-		image: "https://farm4.staticflickr.com/3872/14435096036_39db8f04bc.jpg",
+		name: "Desert Mesa",
+		image: "https://farm7.staticflickr.com/6089/6094103869_d53a990c83.jpg",
 		description: "blah blah blah"
 	},
 	{
-		name: "Cloud's rest",
-		image: "https://farm4.staticflickr.com/3872/14435096036_39db8f04bc.jpg",
+		name: "Canyon Floor",
+		image: "https://farm3.staticflickr.com/2353/2069978635_2eb8b33cd4.jpg",
 		description: "blah blah blah"
 	}
 
