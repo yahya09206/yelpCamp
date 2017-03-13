@@ -1,9 +1,9 @@
 var express 		= require("express"),
 		app 				= express(),
 		bodyParser 	= require("body-parser"),
-	 	mongoose 		= require("mongoose");
-	 	Campground 	= require("./models/campground");
-	 	seedDB 			= require("./seeds");
+	 	mongoose 		= require("mongoose"),
+	 	Campground 	= require("./models/campground"),
+	 	seedDB 			= require("./seeds")
 
 //Seed file everytime server is run
 seedDB();
