@@ -11,17 +11,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 
-
-//Schema setup
-var campgroundSchema = new mongoose.Schema({
-	name: String,
-	image: String,
-	description: String
-});
-
-//model
-var Campground = mongoose.model("Campground", campgroundSchema);
-
 //Create campground inside of db
 // Campground.create(
 // 	{
