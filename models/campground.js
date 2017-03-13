@@ -7,4 +7,4 @@ var campgroundSchema = new mongoose.Schema({
 });
 
 //model
-var Campground = mongoose.model("Campground", campgroundSchema);
+module.exports = mongoose.model("Campground", campgroundSchema);
