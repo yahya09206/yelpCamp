@@ -2,6 +2,7 @@ var express 		= require("express"),
 		app 				= express(),
 		bodyParser 	= require("body-parser"),
 	 	mongoose 		= require("mongoose");
+	 	Campground 	= require("./models/campground");
 
 //connect to mongoose
 mongoose.connect("mongodb://localhost/yelp_camp");
