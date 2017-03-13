@@ -3,7 +3,10 @@ var express 		= require("express"),
 		bodyParser 	= require("body-parser"),
 	 	mongoose 		= require("mongoose");
 	 	Campground 	= require("./models/campground");
+	 	seedDB 			= require("./seeds");
 
+//Seed file everytime server is run
+seedDB();
 //connect to mongoose
 mongoose.connect("mongodb://localhost/yelp_camp");
 //use body parser
