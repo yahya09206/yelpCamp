@@ -70,6 +70,14 @@ app.get("/campgrounds/:id", function(req,res){
 
 //New route for comments
 app.get("/campgrounds/:id/comments/new", function(req,res){
+	//find campground by id
+	Campground.findById(req.params.id, function(err,campground){
+		if(err){
+			console.log(err);
+		}else{
+			res.render("comments/new", {campground: campground});
+		}
+	});
 	res.render("comments/new");
 });
 
