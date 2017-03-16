@@ -68,6 +68,8 @@ app.get("/campgrounds/:id", function(req,res){
 	});
 });
 
+//New route for comments
+
 //port for app to be displayed
 app.listen(3000, function(){
 	console.log("You are now listening to the smooth sounds of port3000");
