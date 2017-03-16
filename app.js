@@ -69,6 +69,9 @@ app.get("/campgrounds/:id", function(req,res){
 });
 
 //New route for comments
+app.get("/campgrounds/:id/comments/new", function(req,res){
+	res.send("This will be the comment form");
+});
 
 //port for app to be displayed
 app.listen(3000, function(){
