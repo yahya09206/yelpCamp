@@ -88,7 +88,15 @@ app.post("/campgrounds/:id/comments", function(req,res){
 			console.log(err);
 			res.direct("/campgrounds");
 		}else{
-			Comment.create({})
+			Comment.create(req.body.comment, function(err,comment){
+				if(err){
+					console.log(err);
+				}else{
+					campground.comments.push(comment);
+					campground.save();
+					res.redirect("/campgrounds/" + campground._id);
+				}
+			});
 		}
 	});
 	//create new comment
