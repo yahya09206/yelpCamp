@@ -81,6 +81,12 @@ app.get("/campgrounds/:id/comments/new", function(req,res){
 });
 
 //POST route for comments
+app.post("/campgrounds/:id/comments", function(req,res){
+	//lookup campground using ID
+	//create new comment
+	//connect comment to campground
+	//redirect to campground show page
+})
 
 //port for app to be displayed
 app.listen(3000, function(){
