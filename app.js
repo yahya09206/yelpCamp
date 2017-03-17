@@ -1,3 +1,4 @@
+//Requirements
 var express 		= require("express"),
 		app 				= express(),
 		bodyParser 	= require("body-parser"),
@@ -100,9 +101,6 @@ app.post("/campgrounds/:id/comments", function(req,res){
 			});
 		}
 	});
-	//create new comment
-	//connect comment to campground
-	//redirect to campground show page
 });
 
 //port for app to be displayed
