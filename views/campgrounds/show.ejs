@@ -23,15 +23,17 @@
 				<div class="text-right">
 					<a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
 				</div>
+				<hr>
 				<% campground.comments.forEach(function(comment){ %>
 				<div class="row">
 					<div class="col-md-12">
-						
+						<strong><%= comment.author %></strong>
+						<span class="pull-right">10 Days Ago</span>
+						<p>
+							<%= comment.text %>
+						</p>
 					</div>
 				</div>
-					<p>
-						<strong><%= comment.author %></strong> - <%= comment.text %>
-					</p>
 				<%	}) %>
 			</div>
 		</div>
