@@ -16,14 +16,12 @@
 				<div class="caption-full">
 					<h4 class="pull-right">$9.00</h4>
 					<h4><a><%= campground.name %></a></h4>
+					<p><%= campground.description %></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<p><%= campground.description %></p>
-
 <p>
 	<a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
 </p>
