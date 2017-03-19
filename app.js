@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //set view engine to ejs
 app.set("view engine", "ejs");
 //Seed file everytime server is run
+app.use(express.static(__dirname + "/public"));
 seedDB();
 
 
