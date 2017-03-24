@@ -6,3 +6,4 @@ db made using mongodb
 will include local user authentication
 will use yelp api
 makes use of restful and nested routing
+-----------------
