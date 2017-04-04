@@ -25,7 +25,9 @@ app.use(require("express-session")({
 	secret: "Coding is life",
 	resave: false,
 	saveUninitialized: false
-});
+}));
+app.use(passport.initialize());
+
 
 
 //landing page route
