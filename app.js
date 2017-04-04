@@ -3,6 +3,7 @@ var express 		= require("express"),
 		app 				= express(),
 		bodyParser 	= require("body-parser"),
 	 	mongoose 		= require("mongoose"),
+	 	passport		= require("passport"),
 	 	Campground 	= require("./models/campground"),
 	 	Comment 		= require("./models/comment"),
 	 	seedDB 			= require("./seeds")
