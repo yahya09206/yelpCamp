@@ -126,6 +126,11 @@ app.get("/register", function(req,res){
 	res.render("register");
 });
 
+//signup logic
+app.post("/register", function(req,res){
+	res.send("Signing you up");
+});
+
 //port for app to be displayed
 app.listen(3000, function(){
 	console.log("You are now listening to the smooth sounds of port3000");
