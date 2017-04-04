@@ -21,6 +21,11 @@ app.use(express.static(__dirname + "/public"));
 seedDB();
 
 //PASSPORT CONFIG
+app.use(require("express-session")({
+	secret: "Coding is life",
+	resave: false,
+	saveUninitialized: false
+});
 
 
 //landing page route
