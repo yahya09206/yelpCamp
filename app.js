@@ -20,6 +20,8 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 seedDB();
 
+//PASSPORT CONFIG
+
 
 //landing page route
 app.get("/", function(req,res){
