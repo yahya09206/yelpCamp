@@ -121,6 +121,10 @@ app.post("/campgrounds/:id/comments", function(req,res){
 
 //AUTH ROUTES
 
+//show register form
+app.get("/register", function(req,res){
+	res.render("register");
+});
 
 //port for app to be displayed
 app.listen(3000, function(){
