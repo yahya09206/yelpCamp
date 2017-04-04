@@ -118,6 +118,10 @@ app.post("/campgrounds/:id/comments", function(req,res){
 	});
 });
 
+
+//AUTH ROUTES
+
+
 //port for app to be displayed
 app.listen(3000, function(){
 	console.log("You are now listening to the smooth sounds of port3000");
