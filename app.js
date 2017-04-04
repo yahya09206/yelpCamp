@@ -4,6 +4,7 @@ var express 		= require("express"),
 		bodyParser 	= require("body-parser"),
 	 	mongoose 		= require("mongoose"),
 	 	passport		= require("passport"),
+	 	localStrategy = require("passport-local");
 	 	Campground 	= require("./models/campground"),
 	 	Comment 		= require("./models/comment"),
 	 	seedDB 			= require("./seeds")
