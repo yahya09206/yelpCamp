@@ -159,6 +159,14 @@ app.get("/logout", function(req,res){
 	res.redirect("/campgrounds");
 });
 
+//logged in middleware
+function isLoggedIn(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect("login");
+}
+
 //port for app to be displayed
 app.listen(3000, function(){
 	console.log("You are now listening to the smooth sounds of port3000");
