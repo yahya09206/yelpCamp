@@ -1,3 +1,6 @@
+var express = require("express");
+var router = express.router;
+
 //New route for comments
 app.get("/campgrounds/:id/comments/new", isLoggedIn, function(req,res){
 	//find campground by id
@@ -30,3 +33,5 @@ app.post("/campgrounds/:id/comments", isLoggedIn, function(req,res){
 		}
 	});
 });
+
+module.exports = router;

@@ -10,9 +10,9 @@ var express 		= require("express"),
 	 	User 				= require("./models/user"),
 	 	seedDB 			= require("./seeds")
 
-var commentRoutes = require("./routes/comments"),
+var commentRoutes 	= require("./routes/comments"),
 		camgroundRoutes = require("./routes/campgrounds"),
-		indexRoutes = require("./routes/index.js")
+		indexRoutes 		= require("./routes/index.js")
 
 //connect to mongoose
 mongoose.connect("mongodb://localhost/yelp_camp");
@@ -41,6 +41,9 @@ app.use(function(req,res,next){
 	next();
 });
 
+app.use(indexRoutes);
+app.use(campgroundRoutes);
+app.use(commentRoutes);
 
 
 //port for app to be displayed

@@ -1,3 +1,5 @@
+var express = require("express");
+var router = express.router;
 //landing page route
 app.get("/", function(req,res){
 	res.render("landing");
@@ -51,3 +53,5 @@ function isLoggedIn(req, res, next){
 	}
 	res.redirect("/login");
 }
+
+module.exports = router;
