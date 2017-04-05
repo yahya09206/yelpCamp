@@ -12,7 +12,7 @@ var express 		= require("express"),
 
 var commentRoutes 	= require("./routes/comments"),
 		camgroundRoutes = require("./routes/campgrounds"),
-		indexRoutes 		= require("./routes/index.js")
+		indexRoutes 		= require("./routes/index")
 
 //connect to mongoose
 mongoose.connect("mongodb://localhost/yelp_camp");
