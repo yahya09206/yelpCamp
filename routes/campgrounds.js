@@ -1,5 +1,5 @@
 var express = require("express");
-var router = express.router;
+var router = express.Router();
 
 //INDEX - show all campgrounds
 router.get("/campgrounds", function(req,res) {
