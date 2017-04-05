@@ -151,7 +151,12 @@ app.post("/login",passport.authenticate("local",
 		successRedirect: "/campgrounds",
 		failureRedirect: "/login"
 	}), function(req,res){
+});
 
+//logout route
+app.get("/logout", function(req,res){
+	req.logout();
+	res.redirect("/campgrounds");
 });
 
 //port for app to be displayed
