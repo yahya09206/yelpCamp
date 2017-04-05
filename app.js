@@ -10,6 +10,10 @@ var express 		= require("express"),
 	 	User 				= require("./models/user"),
 	 	seedDB 			= require("./seeds")
 
+var commentRoutes = require("./routes/comments"),
+		camgroundRoutes = require("./routes/campgrounds"),
+		indexRoutes = require("./routes/index.js")
+
 //connect to mongoose
 mongoose.connect("mongodb://localhost/yelp_camp");
 //use body parser
