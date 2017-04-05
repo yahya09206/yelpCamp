@@ -10,9 +10,9 @@ var express 		= require("express"),
 	 	User 				= require("./models/user"),
 	 	seedDB 			= require("./seeds")
 
-var commentRoutes 	= require("./routes/comments"),
-		camgroundRoutes = require("./routes/campgrounds"),
-		indexRoutes 		= require("./routes/index")
+var commentRoutes 		= require("./routes/comments"),
+		campgroundRoutes	= require("./routes/campgrounds"),
+		indexRoutes 			= require("./routes/index")
 
 //connect to mongoose
 mongoose.connect("mongodb://localhost/yelp_camp");
