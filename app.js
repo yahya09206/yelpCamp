@@ -42,7 +42,7 @@ app.use(function(req,res,next){
 });
 
 app.use(indexRoutes);
-app.use(campgroundRoutes);
+app.use("/campgrounds"campgroundRoutes);
 app.use(commentRoutes);
 
 
