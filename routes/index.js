@@ -1,5 +1,9 @@
 var express = require("express");
 var router = express.router;
+var Passport = require("passport");
+var User = require("../models/user");
+
+
 //landing page route
 router.get("/", function(req,res){
 	res.render("landing");
