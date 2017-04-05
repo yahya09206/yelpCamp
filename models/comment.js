@@ -5,8 +5,9 @@ var commentSchema = mongoose.Schema({
 	author: {
 		id: {
 			type: mongoose.Schema.types.ObjectId,
-		}
-		username:
+			ref: "User"
+		},
+		username: String
 	}
 });
 
