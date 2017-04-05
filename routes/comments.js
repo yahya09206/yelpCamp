@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.router;
 var Campground = require("../models/campground"),
-var Comments = require("../models/comments")
+var Comments = require("../models/comment")
 
 //New route for comments
 router.get("/campgrounds/:id/comments/new", isLoggedIn, function(req,res){
