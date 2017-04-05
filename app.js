@@ -41,9 +41,9 @@ app.use(function(req,res,next){
 	next();
 });
 
-app.use(indexRoutes);
+app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
-app.use("/campground/:id/comments", commentRoutes);
+app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 //port for app to be displayed
