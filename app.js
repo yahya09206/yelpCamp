@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 //Seed file everytime server is run
 app.use(express.static(__dirname + "/public"));
-seedDB();
+// seedDB(); seed db
 
 //PASSPORT CONFIG
 app.use(require("express-session")({
