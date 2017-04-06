@@ -76,6 +76,9 @@ router.put("/:id", function(req,res){
 	});
 });
 
+//destroy campground route
+
+
 //logged in middleware
 function isLoggedIn(req, res, next){
 	if(req.isAuthenticated()){
