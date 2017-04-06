@@ -57,13 +57,14 @@ router.get("/:id", function(req,res){
 //EDIT CAMPGROound route
 router.get("/:id/edit", function(req,res){
 	if(req.isAuthenticated()){
-		Campground.findById(req.params.id, function(err, foundCampground){
-		if(err){
-			res.redirect("/campgrounds")
-		}else{
-			res.render("campgrounds/edit", {campground: foundCampground});
-		}
-	});
+			Campground.findById(req.params.id, function(err, foundCampground){
+				if(err){
+					res.redirect("/campgrounds")
+				}else{
+				if()
+				res.render("campgrounds/edit", {campground: foundCampground});
+			}
+		});
 	}else{
 		console.log("you need to be logged in to do that");
 		res.send("you need to be logged in to do that")
