@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router({mergeParams: true});
 var Campground = require("../models/campground");
-var Comments = require("../models/comment");
+var Comment = require("../models/comment");
 
 //New route for comments
 router.get("/new", isLoggedIn, function(req,res){
