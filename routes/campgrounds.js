@@ -55,7 +55,7 @@ router.get("/:id", function(req,res){
 });
 
 //EDIT CAMPGROound route
-router.get("/:id/edit", function(req,res){
+router.get("/:id/edit", checkCampgroundOwnerShip, function(req,res){
 	Campground.findById(req.params.id, function(err, foundCampground){
 		res.render("campgrounds/edit", {campground: foundCampground});
 	});
