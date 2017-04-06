@@ -54,6 +54,10 @@ router.get("/:id", function(req,res){
 	});
 });
 
+//EDIT CAMPGROound route
+
+//Update campground route
+
 //logged in middleware
 function isLoggedIn(req, res, next){
 	if(req.isAuthenticated()){
