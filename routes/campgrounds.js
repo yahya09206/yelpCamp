@@ -67,7 +67,7 @@ router.get("/:id/edit", function(req,res){
 
 //Update campground route
 router.put("/:id", function(req,res){
-	
+	Campground.findByIdAndUpdate(req.params.id, )
 });
 
 //logged in middleware
