@@ -53,7 +53,7 @@ router.get("/:comment_id/edit", checkCommentOwnerShip, function(req,res){
 });
 
 //UPDATE COMMENT
-router.put("/:comment_id", function(req,res){
+router.put("/:comment_id", checkCommentOwnerShip, function(req,res){
 	Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatedComment){
 		if(err){
 			res.redirect("back");
