@@ -41,7 +41,7 @@ middlewareObj.checkCommentOwnerShip = function(req,res,next){
 }
 
 //logged in authorization
-middlewareObj.isLoggedin = function(req, res, next){
+middlewareObj.isLoggedIn = function(req, res, next){
 	if(req.isAuthenticated()){
 		return next();
 	}
