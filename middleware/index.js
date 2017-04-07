@@ -21,6 +21,7 @@ middleware.checkCampgroundOwnerShip = function(req,res,next){
 	}
 }
 
+//Comment authorization
 middleware.checkCommentOwnerShip = function(req,res,next){
 	if(req.isAuthenticated()){
 			Comment.findById(req.params.comment_id, function(err, foundComment){
@@ -37,6 +38,14 @@ middleware.checkCommentOwnerShip = function(req,res,next){
 	}else{
 		res.redirect("back");
 	}
+}
+
+//logged in authorization
+middleware.isLoggedin = function(req, res, next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect("/login");
 }
 
 
