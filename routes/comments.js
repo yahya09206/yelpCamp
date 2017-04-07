@@ -64,7 +64,9 @@ router.put("/:comment_id", function(req,res){
 });
 
 //COMMENT DESTROY ROUTE
-router.delete("/:comment_id");
+router.delete("/:comment_id", function(req,res){
+	res.send("This is the destroy comment route");
+});
 
 //logged in middleware
 function isLoggedIn(req, res, next){
