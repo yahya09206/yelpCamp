@@ -42,7 +42,7 @@ router.post("/", isLoggedIn, function(req,res){
 });
 
 //EDIT COMMENTS
-router.get("/:comment_id/edit", checkCommentOwnerShip function(req,res){
+router.get("/:comment_id/edit", checkCommentOwnerShip, function(req,res){
 	Comment.findById(req.params.comment_id, function(err, foundComment){
 		if(err){
 			res.redirect("back");
@@ -87,7 +87,6 @@ function checkCommentOwnerShip(req,res,next){
 				}else{
 					res.redirect("back");
 				}
-				
 			}
 		});
 	}else{
