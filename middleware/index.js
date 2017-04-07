@@ -1,4 +1,6 @@
 //All the middleware will be added here
+var Campground = require("../models/campground");
+var Comment = require("../models/comment");
 var middlewareObj = {};
 
 //Campground Authorization
