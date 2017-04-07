@@ -41,9 +41,19 @@ router.post("/", isLoggedIn, function(req,res){
 	});
 });
 
+//EDIT COMMENTS
 router.get("/:comment_id/edit",function(req,res){
-	res.send("comment edit");
+	Comment.findById(req.params.comment_id, function(err, foundComment){
+		if(err){
+			res.redirect("back");
+		}else{
+			res.render("comments/edit", {campground_id: req.params.id, comment: foundComment});
+		}
+	});
 });
+
+//UPDATE COMMENT
+router.
 
 //logged in middleware
 function isLoggedIn(req, res, next){
