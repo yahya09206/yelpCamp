@@ -40,9 +40,11 @@
 						<span class="pull-right">10 Days Ago</span>
 						<p>
 							<%= comment.text %>
-							<a href="/campgrounds/<%= campground._id%>/comments/<%= comment._id%>/edit" class="btn btn-xs btn-warning">Edit</a>
-							<form action="/campgrounds/<%= campground._id%>/comments/<%= comment._id%>?_method=DELETE" method="POST">
-								<button class="btn btn-xs btn-danger">Delete</button>
+							<a href="/campgrounds/<%= campground._id%>/comments/<%= comment._id%>/edit" class="btn btn-xs btn-warning">
+							Edit
+							</a>
+							<form id="delete-form" action="/campgrounds/<%= campground._id%>/comments/<%= comment._id%>?_method=DELETE" method="POST">
+								<input type="submit" class="btn btn-xs btn-danger" value="delete">
 							</form>
 						</p>
 					</div>
