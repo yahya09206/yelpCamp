@@ -2,7 +2,7 @@
 var middlewareObj = {};
 
 //Campground Authorization
-middleware.checkCampgroundOwnerShip = function(req,res,next){
+middlewareObj.checkCampgroundOwnerShip = function(req,res,next){
 	if(req.isAuthenticated()){
 			Campground.findById(req.params.id, function(err, foundCampground){
 				if(err){
@@ -22,7 +22,7 @@ middleware.checkCampgroundOwnerShip = function(req,res,next){
 }
 
 //Comment authorization
-middleware.checkCommentOwnerShip = function(req,res,next){
+middlewareObj.checkCommentOwnerShip = function(req,res,next){
 	if(req.isAuthenticated()){
 			Comment.findById(req.params.comment_id, function(err, foundComment){
 				if(err){
@@ -41,7 +41,7 @@ middleware.checkCommentOwnerShip = function(req,res,next){
 }
 
 //logged in authorization
-middleware.isLoggedin = function(req, res, next){
+middlewareObj.isLoggedin = function(req, res, next){
 	if(req.isAuthenticated()){
 		return next();
 	}
