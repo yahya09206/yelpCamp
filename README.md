@@ -10,4 +10,4 @@ makes use of restful and nested routing
 ------------------
 todo
 make ui improvements
-social media login
+social media login,twitter,facebook,gmail
